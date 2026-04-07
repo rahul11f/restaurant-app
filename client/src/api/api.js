@@ -1,23 +1,23 @@
-import axios from 'axios';
-import { useStore } from '../store/useStore';
+import axios from "axios";
+import { useStore } from "../store/useStore";
 
-const api = axios.create({ baseURL: '/api', timeout: 10000 });
+const api = axios.create({ baseURL: "/api", timeout: 10000 });
 
-api.interceptors.request.use(config => {
+api.interceptors.request.use((config) => {
   const token = useStore.getState().token;
   if (token) config.headers.Authorization = `Bearer ${token}`;
   return config;
 });
 
 api.interceptors.response.use(
-  res => res,
-  err => {
+  (res) => res,
+  (err) => {
     if (err.response?.status === 401) {
       useStore.getState().logout();
-      window.location.href = '/login';
+      window.location.href = "/login";
     }
     return Promise.reject(err);
-  }
+  },
 );
 
 export default api;
