@@ -1,11 +1,20 @@
 import axios from "axios";
 import { useStore } from "../store/useStore";
 
-const api = axios.create({ baseURL: "/api", timeout: 10000 });
+const BASE_URL = import.meta.env.VITE_API_URL || "/api";
+
+const api = axios.create({
+  baseURL: BASE_URL,
+  timeout: 10000,
+});
 
 api.interceptors.request.use((config) => {
   const token = useStore.getState().token;
-  if (token) config.headers.Authorization = `Bearer ${token}`;
+
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+
   return config;
 });
 
