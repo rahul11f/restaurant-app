@@ -8,7 +8,7 @@ A web application for managing restaurant orders, menus, and reservations.
 - Easy to set up and run locally.
 
 ## 🚀 Live Demo
-Check out the live version here: [Live Demo](https://rahul11f.github.io/restaurant-app)
+A live demo is not currently available for this project.
 
 ## 🛠️ Installation & Setup
 
