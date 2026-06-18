@@ -1,53 +1,31 @@
-# 🍽️ Spice & Soul — Full-Stack Restaurant Website
+# restaurant app
 
-A complete restaurant management system with public website + admin panel.
+A web application for managing restaurant orders, menus, and reservations.
 
-## Quick Start
+## ✨ Features
+- Fully responsive design and intuitive user interface.
+- Core functionality built to solve specific use cases.
+- Easy to set up and run locally.
 
-### Prerequisites
-- Node.js 18+
-- MongoDB Atlas account (free) → https://mongodb.com/atlas
-- VS Code
+## 🚀 Live Demo
+Check out the live version here: [Live Demo](https://rahul11f.github.io/restaurant-app)
 
-### 1. Clone & Install
+## 🛠️ Installation & Setup
 
-```bash
-# Install all dependencies at once
-cd restaurant-app
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/rahul11f/restaurant-app.git
+   cd restaurant-app
+   ```
+2. Install dependencies (if applicable):
+   ```bash
+   npm install
+   ```
+3. Run the project locally:
+   ```bash
+   npm start
+   # or npm run dev
+   ```
 
-cd server && npm install
-cd ../client && npm install
-cd ../admin && npm install
-```
-
-### 2. Configure Environment
-
-```bash
-cp server/.env.example server/.env
-# Edit server/.env with your credentials
-```
-
-### 3. Run (open 3 terminals in VS Code)
-
-```bash
-# Terminal 1 — Backend
-cd server && npm run dev
-
-# Terminal 2 — Public Website
-cd client && npm run dev
-
-# Terminal 3 — Admin Panel
-cd admin && npm run dev
-```
-
-### URLs
-- 🌐 Public Website: http://localhost:5173
-- 🔧 Admin Panel: http://localhost:5174
-- 🖥️ API Server: http://localhost:5000
-
-## Default Admin Login
-- Email: admin@spiceandsoul.com
-- Password: Admin@123
-
-## Features
-See the full blueprint in the app. All features listed there are implemented.
+## 👨‍💻 Author
+- **Rahul** - [rahul11f](https://github.com/rahul11f)
